@@ -1,0 +1,13 @@
+# apt install build-essential
+version: '2'
+services:
+  crispbot:
+    build: .
+    container_name: "crisp-bot"
+    restart: always
+    volumes:
+      - /home/developer/mjml-server/:/usr/src/app:rw
+    ports:
+      - 4030:4030
+    expose:
+      - 4030
